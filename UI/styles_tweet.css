@@ -1,0 +1,234 @@
+:root {
+    --header-height: 4rem;
+    --footer-height: 3rem;
+    --default-offset: 1rem; 
+}
+
+
+
+html, body {
+    font-size: 14px;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    background-color: #F1F1F1;
+    font-family: Inter;
+}
+header {
+    background-color: #313131;
+    height: var(--header-height);
+    padding: 0 5rem;
+}
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: space-between; 
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.header-name_app {
+    padding: 0 var(--default-offset);
+    color: white;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+.username_button{
+    display: flex;
+    align-items: center;
+}
+.header-username {
+    color: white;
+    margin-right: 10rem;
+
+}
+.username{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+.button_head{
+    cursor: pointer;
+    padding: 0.2rem 1.4rem;
+    color: #FFFFFF;
+    background: #313131;
+    border: 1px solid #FFFFFF;
+    border-radius: 20px;
+}
+
+main {
+    height: calc(100% - (var(--header-height) + var(--footer-height)));
+    overflow-y: auto;
+    position: relative;
+    display: flex;
+}
+
+.home {
+    margin-left: 5rem;
+    width: 45%;
+}
+
+.all_tweet{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 2rem;
+}
+
+h2{
+    margin-block-start: 0;
+    margin-block-end: var(--default-offset);
+}
+
+.old_tweets{
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+
+}
+
+.user_info{
+    padding: var(--default-offset);
+    font-weight: 600;
+}
+
+.old_tweets .tweet_text{
+    padding: var(--default-offset);
+}
+
+.tweet_text .hashtag{
+    color: rgb(78, 78, 248);
+}
+
+.edit_tweet{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: var(--default-offset);
+}
+
+.num_comments{
+    position: relative;
+    cursor: pointer;
+}
+.num_comments:hover{
+    color: red;
+}
+.num_comments:hover .comments_image{
+    background-color: red;
+
+}
+
+.num_comments .comments_image{
+    height: 2rem;
+    width: 2rem;
+    -webkit-mask: url(/Chat_Circle.svg) no-repeat center/contain;
+    mask: url(/Chat_Circle.svg) no-repeat center/contain;
+    background-color: black;
+}
+
+.comments_count{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.submit_button{
+    margin-right: var(--default-offset);
+    cursor: pointer;
+    padding: 0.2rem 1.4rem;
+    background-color: #313131;
+    color: #FFFFFF;
+    border-radius: 20px;
+    border-width: 0px;
+}
+.delete_button{
+    cursor: pointer;
+    padding: 0.2rem 1.4rem;
+    background-color: rgb(182, 56, 56);
+    color: #FFFFFF;
+    border-radius: 20px;
+    border-width: 0px;
+}
+
+
+.comments{
+    height: 20rem;
+    width: auto;
+    overflow-y: scroll;
+}
+
+.all_comments{
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-left: 2rem;
+    
+}
+
+.all_comments .tweet_text{
+    padding: 0 1rem 1rem ;
+}
+
+.new_comment{
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-top: var(--default-offset);
+}
+
+.wr_com{
+    border: none;
+    padding: var(--default-offset);
+}
+
+.button_comment{
+    display: flex;
+    justify-content: flex-end;
+    padding: var(--default-offset);
+}
+.comment_but{
+    cursor: pointer;
+    padding: 0.2rem 1.4rem;
+    background-color: #313131;
+    color: #FFFFFF;
+    border-radius: 20px;
+    border-width: 0px;
+}
+
+footer {
+    background-color: #313131 ;
+    color: white;
+    height: var(--footer-height);
+}
+
+.footer_elements{
+    display: grid;    
+}
+
+.footer_list{
+    display: flex;    
+    align-items: center;
+    justify-content: space-between;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+    padding: 0 5rem;
+
+}
+footer li{
+    list-style-type: none;
+}
+
+input:focus {
+    outline: none;
+   }
